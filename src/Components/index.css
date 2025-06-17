@@ -1,0 +1,175 @@
+.about-me {
+  align-items: center;
+  height: 100vh;
+  gap: 36px;
+
+  .hello {
+    font-weight: 500;
+  }
+
+  .content {
+    text-align: justify;
+    gap: 8px;
+    width: 65%;
+  }
+
+  .resume-button {
+    text-transform: none;
+    border-radius: 20px;
+    color: white;
+    background-color: #e96269;
+    border-color: #e96269;
+    margin-top: 4px;
+    &:hover {
+      border-color: #e96269cc;
+    }
+    &:focus {
+      box-shadow: none;
+      outline: none;
+    }
+    &:focus-visible {
+      outline: none;
+      box-shadow: none;
+    }
+  }
+  .profile-image {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+  }
+}
+
+.scroll-down {
+  position: fixed;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: bounce 2s infinite;
+  cursor: pointer;
+  svg {
+    font-size: 32px;
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(-20px);
+  }
+}
+
+.contact {
+  max-width: 50vw;
+  margin: 0 auto;
+  height: 100vh;
+
+  .description {
+    width: 75%;
+    margin: 8px 0px;
+  }
+
+  .social-links {
+    justify-content: space-around;
+    width: 40%;
+    margin: 4px auto 0px;
+    a {
+      color: unset;
+    }
+  }
+  .phone-link {
+    text-decoration: none;
+    color: unset;
+  }
+}
+
+.experience {
+  height: 100vh;
+  margin: 0 auto;
+
+  .experience-container {
+    height: calc(100vh - 100px);
+    overflow: scroll;
+    padding-bottom: 50px;
+    padding-top: 25px;
+  }
+
+  .company-meta-container {
+    min-width: 200px;
+    height: 100vh;
+    .company-meta {
+      position: relative;
+    }
+    
+  }
+  .level-ai {
+    .logo {
+      height: 25px;
+    }
+  }
+
+  .trivago {
+    .logo {
+      height: 30px;
+    }
+  }
+
+  .innovaccer {
+    .logo {
+      height: 30px;
+    }
+  }
+
+  .title {
+    margin: 100px 0px 24px;
+  }
+
+  .timeline {
+    position: relative;
+    margin: 24px;
+    width: 10px;
+    background-color: lightgray;
+    height: 100vh;
+  }
+
+  .dot {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 14px;
+    height: 14px;
+    background-color: #e96269;
+    border-radius: 50%;
+  }
+
+  .work-details {
+    .card {
+      position: relative;
+      border-radius: 8px;
+      padding: 16px;
+      text-align: justify;
+      margin-top: 16px;
+      margin-right: 8px;
+      box-shadow: 1px 1px 8px rgba(38, 38, 38, 0.25), 0px 0px 1px rgba(38, 38, 38, 0.31);
+
+      .designation {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        h5 {
+          font-weight: 400;
+        }
+      }
+    }
+    .card:nth-child(1) {
+      margin-top: 0px;
+    }
+  }
+}
+
+.footer {
+  height: 1px;
+  position: relative;
+  bottom: 1px;
+}
