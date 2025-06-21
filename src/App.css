@@ -37,10 +37,7 @@
 }
 
 .profile-image:hover {
-  filter: drop-shadow(0 0 8px #e96269bb);
-}
-.profile-image:hover {
-  filter: drop-shadow(0 0 8px #e96269bb);
+  filter: drop-shadow(4px 0 8px #e96269bb);
 }
 
 @keyframes logo-spin {

@@ -5,67 +5,11 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import TwitterIcon from "@mui/icons-material/X";
 import { Button } from "@mui/material";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
-import levelAiLogo from "./assets/lai.svg";
-import trivagoLogo from "./assets/trv.svg";
-import innovaccerLogo from "./assets/inno.png";
 import profileImage from "./assets/IMG.jpeg";
-import SchoolIcon from "@mui/icons-material/School";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import { useEffect, useRef, useState } from "react";
-
-const startDate = "01/06/2017";
-
-const getMonths = (startDate: string, endDate: string) => {
-  const start = new Date(startDate);
-  const end = new Date(endDate);
-  const months = (end.getFullYear() - start.getFullYear()) * 12;
-  return months;
-};
-
-const today = new Date().toISOString().split("T")[0];
-
-const totalMonths = getMonths(startDate, today);
-const journey = [
-  {
-    company: "Level AI",
-    startDate: "01/09/2022",
-    location: "Noida",
-  },
-  {
-    company: "Trivago",
-    startDate: "01/11/2020",
-    endDate: "01/09/2022",
-    location: "Düsseldorf, Germany",
-  },
-  {
-    company: "Innovaccer",
-    startDate: "01/01/2018",
-    endDate: "01/11/2020",
-    location: "Noida",
-  },
-  {
-    company: "Aadhaar API",
-    startDate: "01/08/2017",
-    endDate: "01/01/2018",
-    location: "Pune",
-  },
-].reduce(
-  (acc, curr) => {
-    const months = getMonths(curr.startDate, today);
-    acc.weight += months;
-    acc.arr.push({ ...curr, top: (months / totalMonths) * 100 });
-    return acc;
-  },
-  {
-    weight: 0,
-    arr: [] as {
-      company: string;
-      startDate: string;
-      location: string;
-      top: number;
-    }[],
-  }
-);
+import Journey, { startDate, getMonths } from "./Components/Journey";
+import stackOverflowLogo from "./assets/stack.png";
 
 function App() {
   const [isScrollAvailable, setIsScrollAvailable] = useState(true);
@@ -93,6 +37,11 @@ function App() {
     };
   }, [footerRef.current]);
 
+  const noOfYears =
+    Math.floor(
+      getMonths(startDate, new Date().toISOString().split("T")[0]) / 12
+    ) + "+";
+
   return (
     <div>
       <div className="about-me flex center">
@@ -104,17 +53,45 @@ function App() {
           />
         </div>
         <div className="col flex content">
-          <h4 className="subtle hello">Hey there, I'm</h4>
+          <h4 className="hello">Hey there, I'm</h4>
           <h1>
             <span className="orange">Ashish</span> Surana 👋
           </h1>
-          <p className="subtle">
-            A software engineer with a passion for building scalable and
+          <p className="">
+            {/* A software engineer with a passion for building scalable and
             efficient systems. I am currently working at Level AI, where I am
             building the frontend for the platform. A software engineer with a
             passion for building scalable and efficient systems. I am currently
             working at Level AI, where I am building the frontend for the
-            platform.
+            platform. */}
+            {/* I’m a Frontend Engineer with 8+ years of experience building web
+            applications that are fast, scalable, and easy to maintain. Over the
+            years, I’ve worked across B2C, B2B products — each bringing its own
+            set of challenges and learnings around performance, accessibility,
+            and user trust.
+            <br />
+            I focus on writing clean, modular code—leveraging reusable
+            components, smart state management, and scalable architecture. I’m
+            big on best practices, from design systems to bundle optimization
+            and CI/CD workflows.
+            <br />
+            From consumer apps to complex enterprise platforms, I bring a
+            thoughtful, scalable approach to frontend development—balancing
+            speed, usability, and long-term maintainability. */}
+            I'm a Frontend Engineer with {noOfYears} years of experience
+            building fast, scalable, and maintainable web apps. I've worked
+            across <b>B2C</b> and <b>B2B</b> products in{" "}
+            <b>health care, travel and customer experience</b> domains, each
+            bringing unique challenges in performance, accessibility, and user
+            trust.
+            <br />I focus on clean, testable, modular code - leveraging reusable
+            components, efficient state management, and scalable architecture.
+            From consumer apps to enterprise platforms, I apply best practices
+            like{" "}
+            <b>
+              design systems, bundle optimization, and reliable user experiences
+            </b>
+            .
           </p>
           <div>
             <Button
@@ -154,7 +131,7 @@ function App() {
               behavior: "smooth",
             });
           }}
-          className="scroll-down orange"
+          className="scroll-down-cta orange"
         >
           <KeyboardArrowDownIcon />
         </div>
@@ -162,105 +139,9 @@ function App() {
 
       <div className="experience flex col">
         <h2 className="title flex">
-          <span className="orange">My</span>&nbsp;Journey
+          <span className="orange">My</span>&nbsp;Journey 🚀
         </h2>
-        <div className="flex experience-container">
-          <div className="company-meta-container">
-            <div className="company-meta level-ai">
-              <a href="https://thelevelai.ai" target="_blank">
-                <img className="logo" src={levelAiLogo} alt="Vite logo" />
-              </a>
-              <h5 className="subtle">Noida</h5>
-            </div>
-            <div
-              className="company-meta trivago"
-              style={{ top: journey.arr[0].top - 7 + "%" }}
-            >
-              <a href="https://trivago.com" target="_blank">
-                <img className="logo" src={trivagoLogo} alt="Vite logo" />
-              </a>
-              <h5 className="subtle">Düsseldorf, Germany</h5>
-            </div>
-            <div
-              className="company-meta innovaccer"
-              style={{ top: journey.arr[1].top - 13 + "%" }}
-            >
-              <a href="https://innovaccer.com" target="_blank">
-                <img className="logo" src={innovaccerLogo} alt="Vite logo" />
-              </a>
-              <h5 className="subtle">Noida</h5>
-            </div>
-            <div
-              className="company-meta innovaccer"
-              style={{ top: journey.arr[2].top - 20 + "%" }}
-            >
-              <a href="https://innovaccer.com" target="_blank">
-                <img className="logo" src={innovaccerLogo} alt="Vite logo" />
-              </a>
-              <h5 className="subtle">Pune</h5>
-            </div>
-            <div className="company-meta" style={{ top: 72 + "%" }}>
-              <SchoolIcon />
-              <h5 className="subtle">2017</h5>
-            </div>
-          </div>
-
-          <div className="timeline">
-            <div className="dot" style={{ top: `${0}%` }}></div>
-            {journey.arr.map((item) => (
-              <div
-                className="dot"
-                key={item.company}
-                style={{ top: `${item.top}%` }}
-              ></div>
-            ))}
-          </div>
-          <div className="flex col work-details">
-            <div className="card">
-              <h4>Senior Software Engineer - Frontend</h4>
-              <h5 className="subtle">
-                Level AI is a startup that is building a platform for AI-powered
-                customer service. I was part of the team that built the frontend
-                for the platform.
-                <br />
-                I was part of the team that built the frontend for the platform.
-                <br />I was part of the team that built the frontend for the
-                platform.
-                <br />I was part of the team that built the frontend for the
-                platform.
-                <br />I was part of the team that built the frontend for the
-                platform.
-              </h5>
-            </div>
-            <div className="card">
-              <div className="designation">
-                <h4>Javascript Engineer</h4>
-                <h5 className="subtle">2020 - 2021</h5>
-              </div>
-              <h5 className="subtle">
-                Level AI is a startup that is building a platform for AI-powered
-                customer service. I was part of the team that built the frontend
-                for the platform.
-              </h5>
-            </div>
-            <div className="card">
-              <h4>Software Engineer - Frontend</h4>
-              <h5 className="subtle">
-                Level AI is a startup that is building a platform for AI-powered
-                customer service. I was part of the team that built the frontend
-                for the platform.
-              </h5>
-            </div>
-            <div className="card">
-              <h4>Full Stack Engineer</h4>
-              <h5 className="subtle">
-                Level AI is a startup that is building a platform for AI-powered
-                customer service. I was part of the team that built the frontend
-                for the platform.
-              </h5>
-            </div>
-          </div>
-        </div>
+        <Journey />
       </div>
 
       <div className="contact flex col center">
@@ -294,8 +175,7 @@ function App() {
             target="_blank"
             href="https://stackoverflow.com/users/3950481/ashish-surana"
           >
-            {/* <StackOverflowIcon /> */}
-            stack
+            <img src={stackOverflowLogo} />
           </a>
           <a href="https://dev.to/ashishsurana">
             <img
@@ -304,7 +184,8 @@ function App() {
               src="https://d2fltix0v2e0sb.cloudfront.net/dev-badge.svg"
               style={{
                 objectFit: "cover",
-                borderRadius: "3px",
+                borderRadius: "4px",
+                marginTop: "2px",
               }}
               width="30"
             />
