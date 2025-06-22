@@ -49,7 +49,7 @@ function App() {
           <img
             src={profileImage}
             className="logo profile-image"
-            alt="Vite logo"
+            alt="Ashish Surana - Profile Picture"
           />
         </div>
         <div className="col flex content">
@@ -57,41 +57,23 @@ function App() {
           <h1>
             <span className="orange">Ashish</span> Surana 👋
           </h1>
-          <p className="">
-            {/* A software engineer with a passion for building scalable and
-            efficient systems. I am currently working at Level AI, where I am
-            building the frontend for the platform. A software engineer with a
-            passion for building scalable and efficient systems. I am currently
-            working at Level AI, where I am building the frontend for the
-            platform. */}
-            {/* I’m a Frontend Engineer with 8+ years of experience building web
-            applications that are fast, scalable, and easy to maintain. Over the
-            years, I’ve worked across B2C, B2B products — each bringing its own
-            set of challenges and learnings around performance, accessibility,
-            and user trust.
-            <br />
-            I focus on writing clean, modular code—leveraging reusable
-            components, smart state management, and scalable architecture. I’m
-            big on best practices, from design systems to bundle optimization
-            and CI/CD workflows.
-            <br />
-            From consumer apps to complex enterprise platforms, I bring a
-            thoughtful, scalable approach to frontend development—balancing
-            speed, usability, and long-term maintainability. */}
+          <p>
             I'm a Frontend Engineer with {noOfYears} years of experience
             building fast, scalable, and maintainable web apps. I've worked
             across <b>B2C</b> and <b>B2B</b> products in{" "}
             <b>health care, travel and customer experience</b> domains, each
             bringing unique challenges in performance, accessibility, and user
             trust.
-            <br />I focus on clean, testable, modular code - leveraging reusable
+            <br />I focus on clean, testable, modular code—using reusable
             components, efficient state management, and scalable architecture.
-            From consumer apps to enterprise platforms, I apply best practices
-            like{" "}
+            Across consumer apps and enterprise platforms, I follow best
+            practices like{" "}
             <b>
-              design systems, bundle optimization, and reliable user experiences
+              design systems, bundle optimization, and and performance tuning
             </b>
-            .
+            . I’ve also integrated <b>AI tools</b> to speed up development,
+            improve code reviews, and catch edge cases early — giving me more
+            time to refine architecture and ensure quality.
           </p>
           <div>
             <Button

@@ -103,12 +103,12 @@
 
 
   .title {
-    margin: 75px 0px 24px;
+    margin: 24px 0px 24px;
     align-self: center;
   }
 
   .experience-container {
-    height: calc(100vh - 75px);
+    height: calc(100vh - 24px);
     overflow: scroll;
     padding-bottom: 50px;
     padding-top: 25px;
@@ -116,7 +116,6 @@
 
   .company-meta-container {
     min-width: 200px;
-    height: 100vh;
     .company-meta {
       position: relative;
     }
@@ -146,7 +145,7 @@
     margin: 24px;
     width: 10px;
     background-color: lightgray;
-    height: 100vh;
+    min-height: 850px;
   }
 
   .dot {
@@ -199,6 +198,9 @@
     .card:nth-child(1) {
       margin-top: 0px;
     }
+    .card:last-child {
+      margin-bottom: 16px;
+    }
     b {
       font-weight: 600;
     }
@@ -247,6 +249,7 @@
     .card {
       margin: 16px 16px 0px !important;
       padding: 12px 16px !important;
+      top: unset !important;
       
       ul {
         font-size: 13px;
