@@ -58,22 +58,16 @@ function App() {
             <span className="orange">Ashish</span> Surana 👋
           </h1>
           <p>
-            I'm a Frontend Engineer with {noOfYears} years of experience
-            building fast, scalable, and maintainable web apps. I've worked
-            across <b>B2C</b> and <b>B2B</b> products in{" "}
-            <b>health care, travel and customer experience</b> domains, each
-            bringing unique challenges in performance, accessibility, and user
-            trust.
-            <br />I focus on clean, testable, modular code—using reusable
+            A Frontend Engineer with {noOfYears} years of experience building
+            fast, scalable, and accessible web apps across <b>B2C</b> and{" "}
+            <b>B2B</b> products in{" "}
+            <b>health care, travel, and customer experience</b> domains.
+            <br />I write clean, testable, modular code — leveraging reusable
             components, efficient state management, and scalable architecture.
-            Across consumer apps and enterprise platforms, I follow best
-            practices like{" "}
-            <b>
-              design systems, bundle optimization, and and performance tuning
-            </b>
-            . I’ve also integrated <b>AI tools</b> to speed up development,
-            improve code reviews, and catch edge cases early — giving me more
-            time to refine architecture and ensure quality.
+            From consumer apps to enterprise platforms, I follow best practices
+            like <b>design systems and performance tuning</b> while leveraging{" "}
+            <b>AI tools</b> to accelerate development, improve code reviews, and
+            catch edge cases early — freeing up time to refine architecture.
           </p>
           <div>
             <Button
