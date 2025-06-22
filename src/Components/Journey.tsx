@@ -58,7 +58,19 @@ const journey = [
 
 const Journey = () => {
   return (
-    <div className="flex experience-container">
+    <div
+      className="flex experience-container scroll-shadows"
+      onScroll={(event) => {
+        const parentElement = event.currentTarget.parentElement;
+        if (parentElement) {
+          const parentRect = parentElement.getBoundingClientRect();
+          if (parentRect.top > 0) {
+            // Scroll parent to top first
+            parentElement.scrollIntoView({ behavior: "smooth" });
+          }
+        }
+      }}
+    >
       <div
         className="flex"
         style={{
@@ -147,11 +159,16 @@ const Journey = () => {
                 processes and onboarding new joiners.
               </li>
               <li>
-                Technologies - <b>React</b>, <b>Next.js</b> firebase, chart.js
+                Contributed in improving <b>Engineering processes</b> and{" "}
+                <b>Automation</b> using <b>AI Tools and Gitlab CI</b>.
+              </li>
+              <li>
+                Technologies - <b>React</b>, <b>Next.js</b>, firebase, chart.js,
+                Jest
               </li>
             </ul>
           </div>
-          <div className="card" style={{ top: "7.5%" }}>
+          <div className="card" style={{ top: "6.5%" }}>
             <div className="company-meta trivago flex center">
               <a href="https://trivago.com" target="_blank">
                 <img className="logo" src={trivagoLogo} alt="" />
@@ -213,8 +230,8 @@ const Journey = () => {
                 whole product), in React using Redux and styled components.
               </li>
               <li>
-                Technologies - React, AngularJs, Next.js, Express, Server Side
-                Rendering
+                Technologies - <b>React</b>, AngularJs{" "}
+                <b>, Express, Server Side Rendering, Micro Frontend</b>
               </li>
             </ul>
           </div>
