@@ -224,15 +224,22 @@
     .content {
       width: 90%;
     }
-  }
-
-  .experience-container {
-    flex-direction: column;
-    gap: 20px;
-    .company-meta-container {
-      display: none;
+    h1 {
+      font-size: 32px;
     }
   }
+
+  .experience {
+    .experience-container {
+      flex-direction: column;
+      gap: 20px;
+      height: unset;
+      .company-meta-container {
+        display: none;
+      }
+    }
+    height: unset;
+}
 
   .timeline {
     display: none;
@@ -266,16 +273,20 @@
     flex-direction: column;
     text-align: center;
     gap: 20px;
+    height: unset;
+
+    .profile-image {
+      width: 200px;
+      height: 200px;
+      margin-top: 20px;
+    }
     
     .content {
       align-items: center;
     }
   }
 
-  .profile-image {
-    width: 120px;
-    height: 120px;
-  }
+
 
   .social-links {
     gap: 16px;
@@ -289,6 +300,10 @@
       line-height: 1.5;
       width: 85%;
     }
+  }
+
+  .scroll-down-cta {
+    display: none;
   }
 }
 /* End Generation Here */
