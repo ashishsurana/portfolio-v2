@@ -63,11 +63,7 @@ const Journey = () => {
       onScroll={(event) => {
         const parentElement = event.currentTarget.parentElement;
         if (parentElement) {
-          const parentRect = parentElement.getBoundingClientRect();
-          if (parentRect.top > 0) {
-            // Scroll parent to top first
-            parentElement.scrollIntoView({ behavior: "smooth" });
-          }
+          parentElement.scrollIntoView({ behavior: "smooth" });
         }
       }}
     >
