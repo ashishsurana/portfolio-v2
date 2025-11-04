@@ -61,13 +61,10 @@ function App() {
             A Frontend Engineer with {noOfYears} years of experience building
             fast, scalable, and accessible web apps across <b>B2C</b> and{" "}
             <b>B2B</b> products in{" "}
-            <b>health care, travel, and customer experience</b> domains.
-            <br />I write clean, testable, modular code — leveraging reusable
-            components, efficient state management, and scalable architecture.
-            From consumer apps to enterprise platforms, I follow best practices
-            like <b>design systems and performance tuning</b> while leveraging{" "}
-            <b>AI tools</b> to accelerate development, improve code reviews, and
-            catch edge cases early — freeing up time to refine architecture.
+            <b>healthcare, travel, and customer experience</b> domains.
+            <br />
+            I specialize in writing clean, testable, and modular code — leveraging reusable components, efficient state management, and scalable architectures. From consumer-facing apps to enterprise platforms, I focus on performance, usability, and maintainability.
+            <br />I follow best practices such as <b>design systems</b> and <b>performance tuning</b>, while integrating <b>AI-powered tools</b> to accelerate development, improve code quality, and catch edge cases early — enabling more time for innovation and architectural refinement.
           </p>
           <div>
             <Button
